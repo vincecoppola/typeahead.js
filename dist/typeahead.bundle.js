@@ -2036,6 +2036,8 @@
                 var $selectable;
                 if ($selectable = this.menu.getActiveSelectable()) {
                     this.select($selectable) && $e.preventDefault();
+                } else if ($selectable = this.menu.getTopSelectable()) {
+                    this.select($selectable) && $e.preventDefault();
                 }
             },
             _onTabKeyed: function onTabKeyed(type, $e) {
